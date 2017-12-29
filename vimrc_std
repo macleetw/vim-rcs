@@ -39,7 +39,8 @@ Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
 
 "Plugin 'scrooloose/syntastic'
-Plugin 'valloric/youcompleteme'
+"Plugin 'valloric/youcompleteme'
+Plugin 'AutoComplPop'
 
 Plugin 'airblade/vim-gitgutter'
 Plugin 'tpope/vim-surround'
@@ -97,6 +98,7 @@ nnoremap <silent> <leader>g :CtrlPTag<CR>
 nnoremap <silent> <leader>z :q<CR>
 nnoremap <silent> <leader>Z :qa!<CR>
 nnoremap <silent> <leader>. :e .<CR>
+nnoremap <silent> <leader>s :so $MYVIMRC<CR>
 
 " tab command
 nnoremap <silent> <leader>1 1gt<CR>

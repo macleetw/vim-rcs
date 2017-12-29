@@ -38,6 +38,7 @@ nnoremap <silent> <leader>g :CtrlPTag<CR>
 nnoremap <silent> <leader>z :q<CR>
 nnoremap <silent> <leader>Z :qa!<CR>
 nnoremap <silent> <leader>. :e .<CR>
+nnoremap <silent> <leader>s :so $MYVIMRC<CR>
 
 " tab command
 nnoremap <silent> <leader>1 1gt<CR>
