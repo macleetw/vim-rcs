@@ -43,10 +43,12 @@ Plugin 'honza/vim-snippets'
 Plugin 'AutoComplPop'
 
 Plugin 'airblade/vim-gitgutter'
-Plugin 'tpope/vim-surround'
+"Plugin 'tpope/vim-surround'
 "Plugin 'spacehi.vim'
 "Plugin 'simplyzhao/cscope_maps.vim'
-Bundle 'neilagabriel/vim-geeknote'
+
+" Fast moving 
+Bundle 'Lokaltog/vim-easymotion'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -70,6 +72,7 @@ set modeline
 set modelines=2
 set t_Co=256
 set viminfo='50
+"set smarttab
 syntax on
 
 " enable spll checking
@@ -77,6 +80,7 @@ syntax on
 
 " Key mappings
 let mapleader=","
+let maplocalleader = "\\"
 "nnoremap <silent> <F12> :TlistToggle<CR>
 "nnoremap <silent> <leader>t :TlistToggle<CR>
 nnoremap <silent> <leader>t :TagbarToggle<CR>
@@ -90,15 +94,12 @@ nnoremap <silent> <leader>p :CtrlP<CR>
 nnoremap <silent> <leader>m :CtrlPMRUFiles<CR>
 nnoremap <silent> <leader>n :NERDTreeToggle<CR>
 nnoremap <silent> <leader>r :e ~/.vimrc<CR>
-"nnoremap <silent> <leader>e :<CR>
-"nnoremap <silent> <leader>a :<CR>
-"nnoremap <silent> <leader>d :<CR>
-"nnoremap <silent> <leader>f :<CR>
 nnoremap <silent> <leader>g :CtrlPTag<CR>
 nnoremap <silent> <leader>z :q<CR>
 nnoremap <silent> <leader>Z :qa!<CR>
 nnoremap <silent> <leader>. :e .<CR>
-nnoremap <silent> <leader>s :so $MYVIMRC<CR>
+nnoremap <silent> <localleader>ev :vsplit $MYVIMRC<CR>
+nnoremap <silent> <localleader>sv :source $MYVIMRC<cr>
 
 " tab command
 nnoremap <silent> <leader>1 1gt<CR>
@@ -157,4 +158,14 @@ set laststatus=2
 "let g:syntastic_check_on_wq = 0
 "let g:syntastic_c_include_dirs = ['inc']
 
-set guifont=細明體:h16
+if has("gui_running")
+    set guifont=手札體-繁 標準體:h18
+endif
+
+"Disable folding, use zi is also ok
+"set nofoldenable
+
+"iabbrev
+iabbrev mymail mac.lee@linctronix
+inoremap jk <esc>
+"inoremap <esc> <nop>
