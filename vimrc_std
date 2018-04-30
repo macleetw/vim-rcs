@@ -49,6 +49,7 @@ Plugin 'airblade/vim-gitgutter'
 
 " Fast moving 
 Bundle 'Lokaltog/vim-easymotion'
+Plugin 'EnhCommentify.vim'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -84,10 +85,10 @@ let maplocalleader = "\\"
 "nnoremap <silent> <F12> :TlistToggle<CR>
 "nnoremap <silent> <leader>t :TlistToggle<CR>
 nnoremap <silent> <leader>t :TagbarToggle<CR>
-nnoremap <silent> <leader>q :copen<CR>
-nnoremap <silent> <leader>c :cclose<CR>
-nnoremap <silent> <leader>s :cn<CR>
-nnoremap <silent> <leader>w :cp<CR>
+nnoremap <silent> <localleader>q :copen<CR>
+nnoremap <silent> <localleader>c :cclose<CR>
+nnoremap <silent> <localleader>s :cn<CR>
+nnoremap <silent> <localleader>w :cp<CR>
 nnoremap <silent> <leader>g :grep -r <cword> *<CR>:copen<CR>
 "nnoremap <silent> <leader>p :SrcExplToggle<CR>
 nnoremap <silent> <leader>p :CtrlP<CR>
@@ -143,6 +144,7 @@ colorscheme  darkblue
 
 " neable cursor line and set color
 set cursorline
+"set cursorcolumn
 hi CursorLine   cterm=NONE ctermbg=blue guibg=blue
 
 " set laststatus to show airline
