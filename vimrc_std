@@ -50,6 +50,7 @@ Plugin 'airblade/vim-gitgutter'
 " Fast moving 
 Bundle 'Lokaltog/vim-easymotion'
 Plugin 'EnhCommentify.vim'
+Plugin 'quickrun.vim'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -58,6 +59,7 @@ filetype plugin indent on    " required
 " VIM settings
 set term=ansi
 set nu
+"set relativenumber
 set ruler
 set incsearch
 set autochdir
@@ -85,22 +87,23 @@ let maplocalleader = "\\"
 "nnoremap <silent> <F12> :TlistToggle<CR>
 "nnoremap <silent> <leader>t :TlistToggle<CR>
 nnoremap <silent> <leader>t :TagbarToggle<CR>
-nnoremap <silent> <localleader>q :copen<CR>
-nnoremap <silent> <localleader>c :cclose<CR>
-nnoremap <silent> <localleader>s :cn<CR>
-nnoremap <silent> <localleader>w :cp<CR>
-nnoremap <silent> <leader>g :grep -r <cword> *<CR>:copen<CR>
 "nnoremap <silent> <leader>p :SrcExplToggle<CR>
 nnoremap <silent> <leader>p :CtrlP<CR>
 nnoremap <silent> <leader>m :CtrlPMRUFiles<CR>
 nnoremap <silent> <leader>n :NERDTreeToggle<CR>
-nnoremap <silent> <leader>r :e ~/.vimrc<CR>
-nnoremap <silent> <leader>g :CtrlPTag<CR>
+"nnoremap <silent> <leader>r :e ~/.vimrc<CR>
+"nnoremap <silent> <leader>g :CtrlPTag<CR>
 nnoremap <silent> <leader>z :q<CR>
 nnoremap <silent> <leader>Z :qa!<CR>
 nnoremap <silent> <leader>. :e .<CR>
+nnoremap <silent> <leader>s :w<CR>
 nnoremap <silent> <localleader>ev :vsplit $MYVIMRC<CR>
 nnoremap <silent> <localleader>sv :source $MYVIMRC<cr>
+nnoremap <silent> <localleader>q :copen<CR>
+nnoremap <silent> <localleader>c :cclose<CR>
+nnoremap <silent> <localleader>s :cn<CR>
+nnoremap <silent> <localleader>w :cp<CR>
+nnoremap <silent> <localleader>g :grep -r <cword> *<CR>:copen<CR>
 
 " tab command
 nnoremap <silent> <leader>1 1gt<CR>
@@ -161,7 +164,7 @@ set laststatus=2
 "let g:syntastic_c_include_dirs = ['inc']
 
 if has("gui_running")
-    set guifont=手札體-繁 標準體:h18
+    set guifont=手札體-繁\ 標準體:h14
 endif
 
 "Disable folding, use zi is also ok
