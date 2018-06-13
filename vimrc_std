@@ -51,6 +51,7 @@ Plugin 'airblade/vim-gitgutter'
 Bundle 'Lokaltog/vim-easymotion'
 Plugin 'EnhCommentify.vim'
 Plugin 'quickrun.vim'
+Plugin 'kakkyz81/evervim'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -164,13 +165,15 @@ set laststatus=2
 "let g:syntastic_c_include_dirs = ['inc']
 
 if has("gui_running")
-    set guifont=手札體-繁\ 標準體:h14
+"    set guifont=手札體-繁\ 標準體:h14
+    set guifont=Courier\ New:h18
 endif
 
 "Disable folding, use zi is also ok
 "set nofoldenable
 
 "iabbrev
-iabbrev mymail mac.lee@linctronix
+iabbrev mymail mac.lee@linctronix.com
 inoremap jk <esc>
+"imap jk <esc>
 "inoremap <esc> <nop>
