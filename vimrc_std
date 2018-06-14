@@ -98,6 +98,7 @@ nnoremap <silent> <leader>z :q<CR>
 nnoremap <silent> <leader>Z :qa!<CR>
 nnoremap <silent> <leader>. :e .<CR>
 nnoremap <silent> <leader>s :w<CR>
+nnoremap <silent> <leader>q :q<CR>
 nnoremap <silent> <localleader>ev :vsplit $MYVIMRC<CR>
 nnoremap <silent> <localleader>sv :source $MYVIMRC<cr>
 nnoremap <silent> <localleader>q :copen<CR>
@@ -174,6 +175,8 @@ endif
 
 "iabbrev
 iabbrev mymail mac.lee@linctronix.com
+iabbrev mygmail macleetw@gmail.com
+
 inoremap jk <esc>
 "imap jk <esc>
 "inoremap <esc> <nop>
