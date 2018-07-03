@@ -51,7 +51,6 @@ Plugin 'airblade/vim-gitgutter'
 Bundle 'Lokaltog/vim-easymotion'
 Plugin 'EnhCommentify.vim'
 Plugin 'quickrun.vim'
-Plugin 'kakkyz81/evervim'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
