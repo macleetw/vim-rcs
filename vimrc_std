@@ -177,5 +177,6 @@ iabbrev mymail mac.lee@linctronix.com
 iabbrev mygmail macleetw@gmail.com
 
 inoremap jk <esc>
+inoremap qq <esc>
 "imap jk <esc>
 "inoremap <esc> <nop>
