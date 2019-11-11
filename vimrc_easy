@@ -1,0 +1,176 @@
+" git clone https://github.com/powerline/fonts
+" git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+let g:UltiSnipsExpandTrigger='<c-j>'
+let g:UltiSnipsJumpForwardTrigger='<c-j>'
+let g:UltiSnipsJumpBackwardTrigger='<c-k>'
+
+let g:ctrlp_match_window = 'bottom,order:btt,min:1,max:20,results:20'
+
+"let g:airline_theme='solarized'
+
+" Vundle setting
+set nocompatible              " be iMproved, required
+filetype off                  " required
+
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim/
+call vundle#begin()
+
+Plugin 'gmarik/Vundle.vim'
+"Plugin 'unite.vim'
+"Plugin 'taglist.vim'
+"Plugin 'wesleyche/SrcExpl'
+Plugin 'scrooloose/nerdtree'
+"Plugin 'vim-airline/vim-airline'
+"Plugin 'vim-airline/vim-airline-themes'
+"Plugin 'Blackrush/vim-gocode'
+let g:airline_powerline_fonts=1
+let g:airline#extensions#tabline#enabled = 1
+
+"Plugin 'tpope/vim-fugitive'
+Plugin 'tagbar'
+let g:tagbar_left = 1
+let g:tagbar_width = 40
+
+Plugin 'kien/ctrlp.vim'
+
+"Plugin 'snipMate'
+"Plugin 'SirVer/ultisnips'
+"Plugin 'honza/vim-snippets'
+
+"Plugin 'scrooloose/syntastic'
+"Plugin 'valloric/youcompleteme'
+"Plugin 'AutoComplPop'
+
+"Plugin 'airblade/vim-gitgutter'
+"Plugin 'tpope/vim-surround'
+"Plugin 'spacehi.vim'
+"Plugin 'simplyzhao/cscope_maps.vim'
+
+" Fast moving 
+Bundle 'Lokaltog/vim-easymotion'
+"Plugin 'EnhCommentify.vim'
+"Plugin 'quickrun.vim'
+
+call vundle#end()            " required
+filetype plugin indent on    " required
+
+
+" VIM settings
+set term=ansi
+set nu
+"set relativenumber
+set ruler
+set incsearch
+set autochdir
+set hlsearch
+" set tags=/usr/lib/python2.5/tags;./tags;tags
+set tags=tags;
+set ai
+" set cindent
+set ts=4
+set sw=4
+set expandtab
+set modeline
+set modelines=2
+set t_Co=256
+set viminfo='50
+"set smarttab
+syntax on
+
+" enable spll checking
+"set spell spelllang=en_us
+
+" Key mappings
+let mapleader=","
+let maplocalleader = "\\"
+"nnoremap <silent> <F12> :TlistToggle<CR>
+"nnoremap <silent> <leader>t :TlistToggle<CR>
+nnoremap <silent> <leader>t :TagbarToggle<CR>
+"nnoremap <silent> <leader>p :SrcExplToggle<CR>
+nnoremap <silent> <leader>p :CtrlP<CR>
+nnoremap <silent> <leader>m :CtrlPMRUFiles<CR>
+nnoremap <silent> <leader>n :NERDTreeToggle<CR>
+"nnoremap <silent> <leader>r :e ~/.vimrc<CR>
+"nnoremap <silent> <leader>g :CtrlPTag<CR>
+nnoremap <silent> <leader>z :q<CR>
+nnoremap <silent> <leader>Z :qa!<CR>
+nnoremap <silent> <leader>. :e .<CR>
+nnoremap <silent> <leader>s :w<CR>
+nnoremap <silent> <leader>q :q<CR>
+nnoremap <silent> <localleader>ev :vsplit $MYVIMRC<CR>
+nnoremap <silent> <localleader>sv :source $MYVIMRC<cr>
+nnoremap <silent> <localleader>q :copen<CR>
+nnoremap <silent> <localleader>c :cclose<CR>
+nnoremap <silent> <localleader>s :cn<CR>
+nnoremap <silent> <localleader>w :cp<CR>
+nnoremap <silent> <localleader>g :grep -r <cword> *<CR>:copen<CR>
+
+" tab command
+nnoremap <silent> <leader>1 1gt<CR>
+nnoremap <silent> <leader>2 2gt<CR>
+nnoremap <silent> <leader>3 3gt<CR>
+nnoremap <silent> <leader>4 4gt<CR>
+nnoremap <silent> <leader>5 5gt<CR>
+nnoremap <silent> <leader>6 6gt<CR>
+nnoremap <silent> <leader>7 7gt<CR>
+nnoremap <silent> <leader>8 9gt<CR>
+nnoremap <silent> <leader>9 9gt<CR>
+nnoremap <silent> <C-n> :tabedit<CR>
+
+" change eaasy motion map
+map <leader>w <Plug>(easymotion-w)
+map <leader>b <Plug>(easymotion-b)
+
+" buffer
+nnoremap <silent> <leader>h :bp<CR>
+nnoremap <silent> <leader>l :bn<CR>
+
+vnoremap <silent> / :s/^/\/\//<CR>:set nohlsearch<CR>
+vnoremap <silent> # :s/^/#/<CR>:set nohlsearch<CR>
+"vnoremap <silent> " :s/^/"/<CR>:set nohlsearch<CR>
+vnoremap <silent> <Space> :s/^\(\/\/\\|#\\|"\)//<CR>
+
+"let Tlist_Auto_Open=1
+let Tlist_Exit_OnlyWindow=1
+let Tlist_File_Fold_Auto_Close=1
+let Tlist_WinWidth=50
+
+"nedtree setting
+let g:NERDTreeWinPos = "right"
+
+" change c comment color
+highlight cComment ctermfg=Green guifg=Green
+
+" ???
+filetype plugin on
+let g:acp_completeOption = '.,w,b,u,t,i,k'
+
+
+" colorsheme
+colorscheme  darkblue
+
+" neable cursor line and set color
+"set cursorline
+"set cursorcolumn
+"hi CursorLine   cterm=NONE ctermbg=blue guibg=blue
+
+" set laststatus to show airline
+"set laststatus=2
+
+" syntastic 
+"set statusline+=%#warningmsg#
+"set statusline+=%{SyntasticStatuslineFlag()}
+"set statusline+=%*
+"let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+"let g:syntastic_check_on_open = 1
+"let g:syntastic_check_on_wq = 0
+"let g:syntastic_c_include_dirs = ['inc']
+
+
+"Disable folding, use zi is also ok
+"set nofoldenable
+
+inoremap jk <esc>
+"inoremap <esc> <nop>
