@@ -118,6 +118,10 @@ nnoremap <silent> <leader>8 9gt<CR>
 nnoremap <silent> <leader>9 9gt<CR>
 nnoremap <silent> <C-n> :tabedit<CR>
 
+" change eaasy motion map
+map <leader>w <Plug>(easymotion-w)
+map <leader>b <Plug>(easymotion-b)
+
 " buffer
 nnoremap <silent> <leader>h :bp<CR>
 nnoremap <silent> <leader>l :bn<CR>
@@ -159,7 +163,7 @@ set laststatus=2
 "set statusline+=%{SyntasticStatuslineFlag()}
 "set statusline+=%*
 "let g:syntastic_always_populate_loc_list = 1
-"let g:syntastic_auto_loc_list = 1
+let g:syntastic_auto_loc_list = 1
 "let g:syntastic_check_on_open = 1
 "let g:syntastic_check_on_wq = 0
 "let g:syntastic_c_include_dirs = ['inc']
@@ -177,5 +181,6 @@ iabbrev mymail mac.lee@linctronix.com
 iabbrev mygmail macleetw@gmail.com
 
 inoremap jk <esc>
-"imap jk <esc>
+inoremap qq <esc>
+"iremap jk <esc>
 "inoremap <esc> <nop>
