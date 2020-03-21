@@ -17,20 +17,41 @@ set rtp+=~/.vim/bundle/Vundle.vim/
 call vundle#begin()
 
 Plugin 'gmarik/Vundle.vim'
+"Plugin 'unite.vim'
 "Plugin 'taglist.vim'
-"Plugin 'scrooloose/nerdtree'
+"Plugin 'wesleyche/SrcExpl'
+Plugin 'scrooloose/nerdtree'
 "Plugin 'vim-airline/vim-airline'
 "Plugin 'vim-airline/vim-airline-themes'
-Plugin 'tagbar'
+"Plugin 'Blackrush/vim-gocode'
 let g:airline_powerline_fonts=1
 let g:airline#extensions#tabline#enabled = 1
+
+"Plugin 'tpope/vim-fugitive'
+Plugin 'tagbar'
 let g:tagbar_left = 1
 let g:tagbar_width = 40
 
 Plugin 'kien/ctrlp.vim'
 
+"Plugin 'snipMate'
+"Plugin 'SirVer/ultisnips'
+"Plugin 'honza/vim-snippets'
+
+"Plugin 'scrooloose/syntastic'
+"Plugin 'valloric/youcompleteme'
+"Plugin 'AutoComplPop'
+
+"Plugin 'airblade/vim-gitgutter'
+"Plugin 'tpope/vim-surround'
+"Plugin 'spacehi.vim'
+"Plugin 'simplyzhao/cscope_maps.vim'
+
 " Fast moving 
 Bundle 'Lokaltog/vim-easymotion'
+"Plugin 'EnhCommentify.vim'
+"Plugin 'quickrun.vim'
+"Plugin 'vim-syntastic/syntastic'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -138,11 +159,30 @@ hi CursorLine   cterm=NONE ctermbg=blue guibg=blue
 " set laststatus to show airline
 set laststatus=2
 
+" syntastic 
+"set statusline+=%#warningmsg#
+"set statusline+=%{SyntasticStatuslineFlag()}
+"set statusline+=%*
+"let g:syntastic_always_populate_loc_list = 1
+"let g:syntastic_auto_loc_list = 1
+"let g:syntastic_check_on_open = 1
+"let g:syntastic_check_on_wq = 0
+"let g:syntastic_c_include_dirs = ['inc']
 
 if has("gui_running")
 "    set guifont=手札體-繁\ 標準體:h14
     set guifont=Courier\ New:h18
 endif
 
+"Disable folding, use zi is also ok
+"set nofoldenable
+
+"iabbrev
+iabbrev mymail mac.lee@linctronix.com
+iabbrev mygmail macleetw@gmail.com
+
+"inoremap jk <esc>
 inoremap zz <esc>
-inoremap <esc> <nop>
+"inoremap qq <esc>
+"iremap jk <esc>
+"inoremap <esc> <nop>
