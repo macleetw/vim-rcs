@@ -146,3 +146,6 @@ endif
 
 inoremap zz <esc>
 inoremap <esc> <nop>
+
+"Disable folding, use zi is also ok
+"set nofoldenable
